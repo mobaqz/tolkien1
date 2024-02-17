@@ -112,6 +112,9 @@ left.clicked.connect(button_left)
 def searching():
     global i
     i = list_label.text()
+    i = int(i)
+    if i > 6:
+        i = 6
     t=open(str(i)+'_txt.txt',encoding='utf-8')
     label_t.setText(t.read())
     page.setText(str(i))
